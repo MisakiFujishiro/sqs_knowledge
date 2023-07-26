@@ -1,15 +1,28 @@
-# SQS
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./../favicon.ico" />
+    <link rel="stylesheet" href="./../dist/reset.css" />
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/base16/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"># SQS
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs.png" style="width: 50%;">
 </div>
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 
 
-## SQSの型
-----
-
+## SQSの型</script></section><section data-markdown><script type="text/template">
 
 ### メッセージ型
 <div style="font-size: 0.8em;">
@@ -22,9 +35,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 
 ### P2P
 <div style="font-size: 0.8em;">
@@ -37,9 +48,7 @@
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
 
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Pull型
 <div style="font-size: 0.8em;">
     <p>
@@ -52,9 +61,7 @@
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
 
-
-----
-### まとめ
+</script></section><section data-markdown><script type="text/template">### まとめ
 <div style="font-size: 0.8em;">
     <p>
         独立した一つ一つのメッセージデータを扱い、<br>
@@ -69,11 +76,7 @@
 
 
 
-
----
-## キューの種類
-----
-### standardキュー
+</script></section></section><section ><section data-markdown><script type="text/template">## キューの種類</script></section><section data-markdown><script type="text/template">### standardキュー
 <div style="font-size: 0.8em;">
     <p>
         ベストエフォートの順序で処理されるキュー<br>
@@ -85,9 +88,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-### fifoキュー
+</script></section><section data-markdown><script type="text/template">### fifoキュー
 
 <div style="font-size: 0.6em;">
     <p>
@@ -110,11 +111,7 @@
 
 
 
-
----
-## 基本機能(standardキュー)
-----
-### メッセージの削除（受信ハンドル）
+</script></section></section><section ><section data-markdown><script type="text/template">## 基本機能(standardキュー)</script></section><section data-markdown><script type="text/template">### メッセージの削除（受信ハンドル）
 <div style="font-size: 0.6em;">
     <p>
         SQSでは、処理を完了時にキューのメッセージをconsumerが削除する<br>
@@ -126,9 +123,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-### ポーリング
+</script></section><section data-markdown><script type="text/template">### ポーリング
 <div style="font-size: 0.6em;">
     <p>
         consumerがSQSに対してメッセージを受信しにいく処理<br>
@@ -140,9 +135,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-### 可視性タイムアウト
+</script></section><section data-markdown><script type="text/template">### 可視性タイムアウト
 <div style="font-size: 0.6em;">
     <p>
         consumer-Xが受信したメッセージを別consumerが認識しなくなる時間<br>
@@ -155,9 +148,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-### 遅延キューとメッセージタイマー
+</script></section><section data-markdown><script type="text/template">### 遅延キューとメッセージタイマー
 <div style="font-size: 0.8em;">
     <p>
         メッセージがキューに入ってから処理されるまでの遅延時間<br>
@@ -169,9 +160,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-### DLT
+</script></section><section data-markdown><script type="text/template">### DLT
 <div style="font-size: 0.8em;">
     <p>
         メッセージが配信されて、処理が失敗した場合に再配信される<br>
@@ -186,11 +175,7 @@
 
 
 
-
----
-## FIFOキュー
-----
-### メッセージグループID
+</script></section></section><section ><section data-markdown><script type="text/template">## FIFOキュー</script></section><section data-markdown><script type="text/template">### メッセージグループID
 <div style="font-size: 0.7em;">
     <p>
         メッセージ送信時に指定する必須のID<br>
@@ -202,9 +187,7 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
-
-----
-### メッセージ重複ID
+</script></section><section data-markdown><script type="text/template">### メッセージ重複ID
 <div style="font-size: 0.8em;">
     <p>
         メッセージ送信時に指定するID<br>
@@ -216,3 +199,56 @@
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
   <img src="img/sqs-1.jpg" style="width: 70%;">
 </div>
+</script></section></section></div>
+    </div>
+
+    <script src="./../dist/reveal.js"></script>
+
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
