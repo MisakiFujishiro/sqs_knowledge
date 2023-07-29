@@ -14,13 +14,12 @@
 ### メッセージ型
 <div style="font-size: 0.8em;">
     <p>
-        メッセージ一つひとつが単独で処理することができる<br>
-        メッセージ間が独立しているため処理順序はベストエフォート
+        メッセージ一つ1つが単独で処理することができる
     </p>
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-03.jpg" style="width: 70%;">
 </div>
 
 ----
@@ -29,12 +28,12 @@
 ### P2P
 <div style="font-size: 0.8em;">
     <p>
-        一つのメッセージに対して、受信者が1つになる
+        1つのメッセージに対して、受信者が1つになる
     </p>
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-04.jpg" style="width: 70%;">
 </div>
 
 
@@ -49,7 +48,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-05.jpg" style="width: 70%;">
 </div>
 
 
@@ -58,13 +57,13 @@
 <div style="font-size: 0.8em;">
     <p>
         独立した一つ一つのメッセージデータを扱い、<br>
-        一つのデータは一つのconsumeが取得するP2P型であり、<br>
+        1つのデータは1つのconsumeが取得するP2P型であり、<br>
         consumerが能動的にデータを取得するpull型のサービス
     </p>
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-06.jpg" style="width: 70%;">
 </div>
 
 
@@ -83,7 +82,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-07.jpg" style="width: 70%;">
 </div>
 
 ----
@@ -98,7 +97,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-08.jpg" style="width: 70%;">
 </div>
 
 
@@ -114,20 +113,6 @@
 ---
 ## 基本機能(standardキュー)
 ----
-### メッセージの削除（受信ハンドル）
-<div style="font-size: 0.6em;">
-    <p>
-        SQSでは、処理を完了時にキューのメッセージをconsumerが削除する<br>
-        consumerがメッセージを受信した際に、SQSからから受信ハンドルが配信される<br>
-        SQSは、メッセージを受信し処理完了時に受信ハンドルを指定して削除を実行する
-    </p>
-</div>
-
-<div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
-</div>
-
-----
 ### ポーリング
 <div style="font-size: 0.6em;">
     <p>
@@ -138,22 +123,38 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-09.jpg" style="width: 70%;">
 </div>
 
 ----
-### 可視性タイムアウト
+### メッセージの削除（受信ハンドル）
 <div style="font-size: 0.6em;">
     <p>
+        SQSでは、処理を完了時にキューのメッセージをconsumerが削除する<br>
+        consumerがメッセージを受信した際に、SQSからから受信ハンドルが配信される<br>
+        SQSは、メッセージを受信し処理完了時に受信ハンドルを指定して削除を実行する
+    </p>
+</div>
+
+<div style="display: flex; justify-content: space-around;margin-top: -20px;">
+  <img src="img/sqs-10.jpg" style="width: 70%;">
+</div>
+
+
+
+----
+### 可視性タイムアウト
+<div style="font-size: 0.55em;">
+    <p>
         consumer-Xが受信したメッセージを別consumerが認識しなくなる時間<br>
-        この時間はタイムアウトの時間などを鑑みて決定する必要があり、<br>
-        別のconsumerに配信された場合受信ハンドルが新規発行され、<br>
+        この時間はタイムアウトの時間などを鑑みて決定する必要がある<br>
+        可視性タイムアウト経過後、別のconsumerに配信されると受信ハンドルが新規発行され<br>
         consumer-Xが受け取った古い受信ハンドルでは削除できなくなる
     </p>
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-11.jpg" style="width: 70%;">
 </div>
 
 ----
@@ -167,7 +168,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-12.jpg" style="width: 70%;">
 </div>
 
 ----
@@ -181,7 +182,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-13.jpg" style="width: 70%;">
 </div>
 
 
@@ -200,7 +201,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-14.jpg" style="width: 70%;">
 </div>
 
 ----
@@ -214,5 +215,5 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-1.jpg" style="width: 70%;">
+  <img src="img/sqs-15.jpg" style="width: 70%;">
 </div>
