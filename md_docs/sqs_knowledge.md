@@ -182,7 +182,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-13.jpg" style="width: 70%;">
+  <img src="img/sqs-13.jpg" style="width: 50%;">
 </div>
 
 
@@ -201,7 +201,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-14.jpg" style="width: 70%;">
+  <img src="img/sqs-14.jpg" style="width: 90%;">
 </div>
 
 ----
@@ -215,5 +215,5 @@
 </div>
 
 <div style="display: flex; justify-content: space-around;margin-top: -20px;">
-  <img src="img/sqs-15.jpg" style="width: 70%;">
+  <img src="img/sqs-15.jpg" style="width: 90%;">
 </div>
